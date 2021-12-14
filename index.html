@@ -8,8 +8,9 @@
     <script>
         const root = document.getElementById("root");
         const h3 = React.createElement("h3", {
+            id: "title",
             onMouseEnter: () => console.log("mouse ender"),
-        }, "Hello I'm a h3");
+        }, "Hello I'm a title");
         const btn = React.createElement("button", {
             onClick: () => console.log("i'm clicked"),
         }, "Click me")
