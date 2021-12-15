@@ -7,35 +7,27 @@
     <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone@7.16.5/babel.min.js"></script>
     <script type="text/babel">
-        function SaveBtn() {
+        function Btn({ text, changeValue }) {
+            // console.log(props);
             return (
                 <button 
+                    onClick={ changeValue }
                     style={{
                         backgroundColor: "tomato",
                         color: "white",
                         padding: "10px 20px",
                         border: 0,
                         borderRadius: 10,
-                    }}>Save Change</button>
-            );
-        }
-        function ConfirmBtn() {
-            return (
-                <button
-                    style={{
-                        backgroundColor: "tomato",
-                        color: "white",
-                        padding: "10px 20px",
-                        border: 0,
-                        borderRadius: 10,
-                    }}>Confirm</button>
+                    }}>{ text }</button>
             );
         }
         function App() {
+            const [value, setValue] = React.useState("Save Changes")
+            const changeValue = () => setValue("Rever Changes")
             return (
                 <div>
-                    <SaveBtn />
-                    <ConfirmBtn />
+                    <Btn text={ value } changeValue={ changeValue }/>
+                    <Btn text="Continue"/>
                 </div>
             );
         }
