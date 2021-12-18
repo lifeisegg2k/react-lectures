@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Button from "./Button";
 import TodoList from "./TodoList";
 import CoinTracker from "./CoinTracker";
+import Movies from "./Movies";
 
 function App() {
   
@@ -12,6 +13,8 @@ function App() {
       <TodoList />
       <hr />
       <CoinTracker />
+      <hr />
+      <Movies />
     </div>
   );
 }
