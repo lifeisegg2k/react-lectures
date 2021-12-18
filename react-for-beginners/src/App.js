@@ -17,12 +17,12 @@ function App() {
         <CoinTracker />
       </Route>
       <Route path="/button">
-        <Button />
+        <Button text="test" />
       </Route>
       <Route path="/todo">
         <TodoList />
       </Route>
-      <Route path="/movie">
+      <Route path="/movie/:id">
         <Details />
       </Route>
       <Route path="/">
